@@ -1,2 +1,2 @@
-# moms-music
-Kinda Music Player
+# Mom's Music
+- Kinda Music Player
