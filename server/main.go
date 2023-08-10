@@ -1,29 +1,29 @@
 package main
 
 import (
-	// "fmt"
-
 	"fmt"
 	"log"
+	"os"
 
 	"net/http"
 	"time"
+
+	"github.com/joho/godotenv"
 )
 
-const port = ":8080"
-
 func main() {
+	err := godotenv.Load()
+	if err != nil {
+		log.Fatal(err)
+	}
 	
-
 	srv := &http.Server{
-		Addr:         port,
+		Addr:         ":" + os.Getenv("PORT"),
 		Handler:      routes(),
 		ReadTimeout:  time.Minute,
 		WriteTimeout: time.Minute,
 	}
 
-	fmt.Printf("Starting server at port %s \n", port)
-
-	err := srv.ListenAndServe()
-	log.Fatal(err)
-
+	fmt.Printf("Starting server at port %s \n", os.Getenv("PORT"))
+	log.Fatal(srv.ListenAndServe())
+}
