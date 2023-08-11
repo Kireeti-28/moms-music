@@ -14,12 +14,15 @@ func routes() http.Handler {
 	router.Use(auth.MiddlewareLog)
 	router.Use(auth.MiddlewareCors)
 
-	fsHandler := http.FileServer(http.Dir("./frontend"))
+	fsHandler := http.StripPrefix("", http.FileServer(http.Dir("./frontend")))
 	router.Handle("/", fsHandler)
 	router.Handle("/*", fsHandler)
 
-	router.Post("/user/login", handlers.Login)
-	router.Post("/user/register", handlers.Register)
+	apiRouter := chi.NewRouter()
+	apiRouter.Post("/user/login", handlers.Login)
+	apiRouter.Post("/user/register", handlers.Register)
+
+	router.Mount("/api", apiRouter)
 
 	return router
 }
