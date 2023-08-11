@@ -23,3 +23,6 @@ git clone github.com/kireeti-28/moms-music
 ```bash
 go ./moms-music
 ```
+
+## Note
+- This was still in progress and not fully production ready application. However, I will continue wokring on this as time permits.
