@@ -16,7 +16,7 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	
+
 	srv := &http.Server{
 		Addr:         ":" + os.Getenv("PORT"),
 		Handler:      routes(),

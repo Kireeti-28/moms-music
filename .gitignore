@@ -1,3 +1,4 @@
 /server/*.exe
 /server/.vscode
 /server/.env
+.vscode
