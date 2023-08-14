@@ -17,11 +17,11 @@ git clone github.com/kireeti-28/moms-music
 - Declare your ```PORT & MONGODB_CONNECTION_URL``` in the env file.
 - Build.
 ```bash
-  go build moms-music
+go build moms-music
 ```
 - Start.
 ```bash
-go ./moms-music
+./moms-music
 ```
 
 ## Note
