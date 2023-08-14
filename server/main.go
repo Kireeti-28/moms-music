@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"log"
 	"os"
 
@@ -24,6 +23,6 @@ func main() {
 		WriteTimeout: time.Minute,
 	}
 
-	fmt.Printf("Starting server at port %s \n", os.Getenv("PORT"))
+	log.Printf("Starting server at port %s \n", os.Getenv("PORT"))
 	log.Fatal(srv.ListenAndServe())
 }
