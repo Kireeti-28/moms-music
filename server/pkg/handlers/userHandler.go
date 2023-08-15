@@ -5,9 +5,9 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/kireeti-28/soul-tidings/pkg/auth"
-	"github.com/kireeti-28/soul-tidings/pkg/database"
-	"github.com/kireeti-28/soul-tidings/pkg/utils"
+	"github.com/kireeti-28/moms-music/pkg/auth"
+	"github.com/kireeti-28/moms-music/pkg/database"
+	"github.com/kireeti-28/moms-music/pkg/utils"
 )
 
 func Login(w http.ResponseWriter, r *http.Request) {

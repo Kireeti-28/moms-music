@@ -1,4 +1,4 @@
-module github.com/kireeti-28/soul-tidings
+module github.com/kireeti-28/moms-music
 
 go 1.19
 
