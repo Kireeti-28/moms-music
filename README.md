@@ -25,4 +25,4 @@ go build moms-music
 ```
 
 ## Note
-- This was still in progress and not fully production ready application. However, I will continue wokring on this as time permits.
+- This was still in progress and not fully production ready application. However, I will continue wokring on.
