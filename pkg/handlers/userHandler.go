@@ -62,8 +62,9 @@ func Register(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	dat, _ := database.GetUser(data.Email)
+	dat, _ := database.GetUser(data.Email) 
 
+	// if user is not nil return error
 	if dat.Email == data.Email {
 		utils.RespondWithError(w, http.StatusBadRequest, "email already existed")
 		return

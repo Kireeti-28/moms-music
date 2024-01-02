@@ -12,7 +12,7 @@ import (
 func routes() http.Handler {
 	router := chi.NewRouter()
 
-	router.Use(auth.MiddlewareLog)
+	// router.Use(auth.MiddlewareLog)
 	router.Use(auth.MiddlewareCors)
 
 	FileServer(router)
